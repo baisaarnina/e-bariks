@@ -9,7 +9,9 @@ function App() {
   return (
     <div className='App' style={{backgroundColor:'#FDE5D4'}}>
       <TopBar/>
-      <Routes path='/' element={<Introduksyon/>}/> 
+      <Routes>
+        <Route path='/' element={<Introduksyon/>}/>
+      </Routes>
     </div>
   );
 }
