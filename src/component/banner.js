@@ -6,29 +6,106 @@ import { appbarHeight, pagePadding } from "../constant/constant";
 import { Box, Typography, Grid } from "@mui/material";
 
 import banner from '../assets/image/banner.png'
+import logo from '../assets/image/logo.png'
 
 export default function Banner() {
-    
-    return(
+
+    return (
         <div>
             <Box sx={style.container}>
                 <Box sx={style.container_two}>
-                <Box sx={style.backgroundImageOverlay}></Box>
-                <Box sx={style.contentContainer}>
-                    <Grid container>
-                        <Grid item>
-                            <img src={banner}/>
+                    {/* <Box sx={style.backgroundImageOverlay}></Box> */}
+                    <Box sx={style.contentContainer}>
+                        <Grid container spacing={8} alignItems="center">
+                            {/* Banner Image */}
+                            <Grid item xs={12} md={6}>
+                                <Box
+                                    component="img"
+                                    src={banner}
+                                    alt="banner"
+                                    sx={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                        borderRadius: 4,
+                                    }}
+                                />
+                            </Grid>
+
+                            <Grid
+                                item
+                                xs={12}
+                                md={6}
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    gap: 2,
+                                    textAlign: 'center',
+                                }}
+                            >
+                                <Box
+                                    component="img"
+                                    src={logo}
+                                    alt="logo"
+                                    sx={{
+                                        height: 190,
+                                        width: 190,
+                                    }}
+                                />
+                                <Typography
+                                    sx={{
+                                        fontSize: 28,
+                                        fontWeight: 'bold',
+                                        color: 'white',
+                                        position: 'relative',
+                                        display: 'inline-block',
+                                        '&::after': {
+                                            content: '""',
+                                            position: 'absolute',
+                                            left: 0,
+                                            bottom: -4,
+                                            width: '100%',
+                                            height: '2px',
+                                            borderRadius: 2,
+                                        },
+                                    }}
+                                >
+                                    E-BARIKS:
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: 24,
+                                        color: 'white',
+                                        position: 'relative',
+                                        display: 'inline-block',
+                                        '&::after': {
+                                            content: '""',
+                                            position: 'absolute',
+                                            left: 0,
+                                            bottom: -4,
+                                            width: '100%',
+                                            height: '2px',
+                                            borderRadius: 2,
+                                            padding:10
+                                        },
+                                    }}
+                                >
+                                    Pamanang Tradisyunal na Kabuhayan sa Bayan ng Vinzons, Camarines Norte
+                                </Typography>
+                            </Grid>
                         </Grid>
-                    </Grid>
-                </Box>
+
+                    </Box>
                 </Box>
 
             </Box>
         </div>
     );
 }
-const style ={
-    container:{
+const style = {
+    container: {
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
@@ -43,7 +120,7 @@ const style ={
         height: `calc(100vh - (${appbarHeight} + (${pagePadding}*2)))`,
         overflow: 'hidden',
         borderRadius: S.br16,
-        backgroundColor: C.mainBrown,
+
     },
     backgroundImageOverlay: {
         position: 'absolute',
@@ -54,6 +131,7 @@ const style ={
         opacity: 0.6,
         backgroundColor: '#0F2410',
         borderRadius: S.sp16,
+
     },
     contentContainer: {
         position: 'absolute',
@@ -66,7 +144,9 @@ const style ={
         alignItems: 'center',
         zIndex: 2,
         backgroundColor: 'rgba(0, 0, 0, 0.4)',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        backgroundColor: '#5E3023'
+
     },
     title: {
         color: C.primaryText,
