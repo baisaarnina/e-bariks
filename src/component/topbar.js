@@ -93,7 +93,7 @@ export default function TopBar() {
                                             <ListItemButton
                                                 component={RouterLink}
                                                 to={item.path}
-                                                onClick={()=>{
+                                                onClick={() => {
                                                     console.log("item", item.path);
                                                 }}
                                             >
@@ -121,35 +121,36 @@ export default function TopBar() {
                             gap: isTablet ? 1 : 2,
                         }}
                     >
-                        {tabItems.map((item) => (
+                        {menu.map((item) => (
                             <Button
-                                key={item}
-                                component={RouterLink}
-                                to={`/${item.toLowerCase() === 'INTRODUKSYON' ? '' : item.toLowerCase()}`}
+                            key={item.id}
+                            component={RouterLink}
+                            to={item.path}
+                            sx={{
+                                color: '#FFFFFF',
+                                backgroundColor: 'transparent',
+                                transition: 'background-color 0.3s ease',
+                                '&:hover': {
+                                    color: '#5E3023',
+                                    backgroundColor: 'white',
+                                },
+                                '&:active': {
+                                    color: '#5E3023',
+                                    backgroundColor: 'white',
+                                },
+                            }}
+                        >
+                            <Typography
                                 sx={{
-                                    color: '#FFFFFF',
-                                    backgroundColor: 'transparent',
-                                    transition: 'background-color 0.3s ease',
-                                    '&:hover': {
-                                        color: '#5E3023',
-                                        backgroundColor: 'white',
-                                    },
-                                    '&:active': {
-                                        color: '#5E3023',
-                                        backgroundColor: 'white',
-                                    },
+                                    fontSize: 16,
+                                    textTransform: 'capitalize'
                                 }}
                             >
-                                <Typography
-                                    sx={{
-                                        fontSize: 16,
-                                        textTransform: 'capitalize'
-                                    }}
-                                >
-                                    {item}
-                                </Typography>
-                            </Button>
+                                {item.name}
+                            </Typography>
+                        </Button>
                         ))}
+
                     </Box>
                 )}
             </Toolbar>
