@@ -5,12 +5,16 @@ import { Box } from "@mui/material";
 import C from '../constant/colors';
 import S from '../constant/sizes';
 import banner from '../assets/image/banner.png'
+import Pauna from "../component/pauna";
 
 
 export default function Introduksyon() {
     return (
         <Box xs={12} sx={style.maincontainer}>
           <Banner/>
+          <Box sx={style.container}>
+            <Pauna/>
+          </Box>
         </Box>
     );
 }
@@ -21,7 +25,7 @@ const style = {
         flexDirection: 'column',
         backgroundColor: C.primarybackground,
         position: 'relative',
-        overflowX: 'hidden',
+        overflow: 'hidden',
         // padding: pagePadding,
     },
     container: {

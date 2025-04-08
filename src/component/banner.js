@@ -32,6 +32,7 @@ export default function Banner() {
                                 />
                             </Grid>
 
+                            {/* Logo + Text Section */}
                             <Grid
                                 item
                                 xs={12}
