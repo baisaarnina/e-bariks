@@ -11,7 +11,7 @@ export default function Introduksyon() {
     return (
         <Box xs={12} sx={style.maincontainer}>
           <Banner/>
-          <img src={banner}/>
+          <img src={banner} />
         </Box>
     );
 }
