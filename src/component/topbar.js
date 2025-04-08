@@ -32,6 +32,16 @@ export default function TopBar() {
     const toggleDrawer = (open) => () => {
         setOpenDrawer(open);
     };
+
+    const menu = [
+        { id: 0, name: 'INTRODUKSYON', path: '/' },
+        { id: 2, name: 'KASAYSAYAN', path: '/kasaysayan' },
+        { id: 1, name: 'IMPLIKASYON AT PANINIWALA', path: '/implikasyon at paniniwala' },
+        { id: 3, name: 'PROSESO', path: '/proseso' },
+        { id: 4, name: 'KONKLUSYON', path: '/konklusyon' },
+        { id: 4, name: 'KONTAK', path: '/kontak' },
+    ]
+
     return (
         <AppBar
             sx={{
@@ -43,7 +53,7 @@ export default function TopBar() {
             }}
         >
             <Toolbar sx={{ justifyContent: 'space-between', paddingX: isMobile ? 2 : 4 }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <img src={Logo} alt="Temporary Logo" width={isMobile ? 30 : isTablet ? 32 : 35} height={isMobile ? 30 : isTablet ? 32 : 35} />
                     <Typography
                         component="div"
@@ -71,20 +81,24 @@ export default function TopBar() {
                             onClose={toggleDrawer(false)}
                         >
                             <Box
+
                                 sx={{ width: 250 }}
                                 role="presentation"
                                 onClick={toggleDrawer(false)}
                                 onKeyDown={toggleDrawer(false)}
                             >
                                 <List>
-                                    {tabItems.map((item) => (
-                                        <ListItem key={item} disablePadding>
+                                    {menu.map((item) => (
+                                        <ListItem key={item.id} disablePadding >
                                             <ListItemButton
                                                 component={RouterLink}
-                                                to={`/${item.toLowerCase() === 'introduksyon' ? '/' : item.toLowerCase()}`}
+                                                to={item.path}
+                                                onClick={()=>{
+                                                    console.log("item", item.path);
+                                                }}
                                             >
                                                 <ListItemText
-                                                    primary={item}
+                                                    primary={item.name}
                                                     primaryTypographyProps={{
                                                         sx: {
                                                             fontSize: 18,
