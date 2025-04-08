@@ -81,7 +81,7 @@ export default function TopBar() {
                                         <ListItem key={item} disablePadding>
                                             <ListItemButton
                                                 component={RouterLink}
-                                                to={`/${item.toLowerCase() === 'INTRODUKSYON' ? '/' : item.toLowerCase()}`}
+                                                to={`/${item.toLowerCase() === 'introduksyon' ? '/' : item.toLowerCase()}`}
                                             >
                                                 <ListItemText
                                                     primary={item}
