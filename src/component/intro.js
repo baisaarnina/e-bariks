@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
 import homeData from "../json/home.json";
-import Pauna1 from "../assets/image/pauna1.png";
+import sasa from '../assets/image/sasa.jpg'
 import { appbarHeight, pagePadding } from "../constant/constant";
 
 export default function Intro() {
@@ -41,7 +41,7 @@ export default function Intro() {
                 <Box xs={12} md={6} width='50%'>
                     <Box
                         component="img"
-                        src={Pauna1}
+                        src={sasa}
                         alt="Paunang Salita"
                         sx={{
                             width: '100%',

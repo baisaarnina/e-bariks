@@ -2,6 +2,8 @@ import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import homeData from "../json/home.json";
 import Pauna1 from "../assets/image/pauna1.png";
+import tuba from "../assets/image/tuba.jpg";
+
 import { appbarHeight, pagePadding } from "../constant/constant";
 
 export default function Pauna() {
@@ -55,7 +57,7 @@ export default function Pauna() {
         <Box xs={12} md={6} width='50%'>
           <Box
             component="img"
-            src={Pauna1}
+            src={tuba}
             alt="Paunang Salita"
             sx={{
               width: '100%',
