@@ -1,5 +1,6 @@
 const S = {
   //width/height
+  s3: "3px",
   s10: "10px",
   s12: "12px",
   s20: "20px",

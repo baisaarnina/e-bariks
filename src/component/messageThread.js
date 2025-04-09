@@ -1,5 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import S from "../constant/sizes";
+import C from "../constant/colors";
 
 const MessageThread = ({ messages }) => {
   return (
@@ -11,16 +13,14 @@ const MessageThread = ({ messages }) => {
         backgroundColor: "#fffaf5",
       }}
     >
-      {/* Vertical line in center */}
       <Box
         sx={{
           position: "absolute",
           top: 0,
           bottom: 0,
           left: "50%",
-          width: "3px",
-          backgroundColor: "#8B5E3C",
-          transform: "translateX(-50%)",
+          width: S.s3,
+          backgroundColor: C.mainBrown,
         }}
       />
 
@@ -37,10 +37,9 @@ const MessageThread = ({ messages }) => {
               mb: 10,
             }}
           >
-            {/* Left Side */}
-            {isLeft ? (
+            {!isLeft ? (
               <>
-                <Box sx={{ width: "45%", pr: 4, textAlign: "right" }}>
+                <Box sx={{ width: "40%", pr: 4, textAlign: "right" }}>
                   <Typography
                     variant="body1"
                     sx={{ color: "#333", fontSize: "1rem" }}
@@ -48,11 +47,13 @@ const MessageThread = ({ messages }) => {
                     {msg.text}
                   </Typography>
                 </Box>
+
                 <Box
                   sx={{
                     width: "10%",
                     display: "flex",
-                    justifyContent: "center",
+                    justifyContent: "left",
+                    alignItems: "center",
                   }}
                 >
                   <Box
@@ -61,23 +62,39 @@ const MessageThread = ({ messages }) => {
                       height: 12,
                       backgroundColor: "#8B5E3C",
                       borderRadius: "50%",
+                    }}
+                  />
+                  <Box
+                    sx={{
+                      position: "relative",
+                      width: "100%",
+                      height: "3px",
+                      backgroundColor: C.mainBrown,
                     }}
                   />
                 </Box>
 
-                <Box sx={{ width: "45%" }} />
+                <Box sx={{ width: "55%" }} />
               </>
             ) : (
               <>
-                <Box sx={{ width: "45%" }} />
-                {/* Dot */}
+                <Box sx={{ width: "60%" }} />
                 <Box
                   sx={{
                     width: "10%",
                     display: "flex",
-                    justifyContent: "center",
+                    justifyContent: "right",
+                    alignItems: "center",
                   }}
                 >
+                  <Box
+                    sx={{
+                      position: "relative",
+                      width: "100%",
+                      height: "3px",
+                      backgroundColor: C.mainBrown,
+                    }}
+                  />
                   <Box
                     sx={{
                       width: 12,
@@ -87,7 +104,6 @@ const MessageThread = ({ messages }) => {
                     }}
                   />
                 </Box>
-                {/* Right Side */}
                 <Box sx={{ width: "45%", pl: 4, textAlign: "left" }}>
                   <Typography
                     variant="body1"

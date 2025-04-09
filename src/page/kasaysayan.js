@@ -31,7 +31,7 @@ export default function Kasaysayan() {
     <Box
       sx={{
         minHeight: "100vh",
-        backgroundColor: "#fce5d3", // warm beige
+        backgroundColor: "#fce5d3",
         overflowY: "auto",
         py: 4,
       }}
