@@ -1,6 +1,8 @@
 const S = {
   //width/height
+  s3: "3px",
   s10: "10px",
+  s12: "12px",
   s20: "20px",
   s24: "24px",
   s30: "30px",
@@ -80,5 +82,11 @@ const S = {
   br32: "32px",
   br35: "35px",
   br56: "56px",
+
+  mp8: "8px",
+  mp12: "12px",
+  mp16: "16px",
+  mp24: "24px",
+  mp40: "40px",
 };
 export default S;

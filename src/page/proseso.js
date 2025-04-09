@@ -75,13 +75,12 @@ export default function Proseso() {
 
       <Box
         sx={{
-          px: { xs: 2, sm: 4, md: 10, lg: "182px" },
-          py: { xs: 6, md: "100px" },
+          px: { xs: 2, sm: 4, md: 10, lg: 20 },
+          py: { xs: 6, md: 8 },
         }}
       >
-        <Typography color="initial" sx={style.text} gutterBottom>
-          PROSESO NG PAGBABARIKS
-        </Typography>
+        {/* LABEL 1 */}
+        <Typography sx={style.text}>PROSESO NG PAGBABARIKS</Typography>
 
         <Box
           sx={{
@@ -129,11 +128,7 @@ export default function Proseso() {
               />
             </Box>
           </Box>
-          <Typography
-            color="initial"
-            fontSize={{ xs: "18px", md: "24px" }}
-            sx={{ textAlign: "justify" }}
-          >
+          <Typography color="initial" sx={style.label}>
             {T.text1}
           </Typography>
         </Box>
@@ -146,13 +141,8 @@ export default function Proseso() {
             pt: { xs: 6, md: "80px" },
           }}
         >
-          <Typography
-            color="initial"
-            fontSize={{ xs: "18px", md: "24px" }}
-            sx={{ textAlign: "justify" }}
-          >
-            {T.text2}
-          </Typography>
+          {/* LABEL 2 */}
+          <Typography sx={style.label}>{T.text2}</Typography>
 
           <Box
             sx={{
@@ -195,17 +185,11 @@ export default function Proseso() {
         </Box>
       </Box>
 
-      <Box sx={style.container}>
-        <Typography color="initial" sx={style.containerText}>
-          {T.text3}
-        </Typography>
+      <Box sx={style.textBox}>
+        <Typography sx={style.containerText}>{T.text3}</Typography>
       </Box>
 
-      <Typography
-        color="initial"
-        sx={{ ...style.text, px: { xs: 2, sm: 4 } }}
-        gutterBottom
-      >
+      <Typography color="initial" sx={style.text}>
         MGA KASANGKAPANG GINAGAMIT SA PAGBABARIKS
       </Typography>
 
@@ -230,11 +214,13 @@ export default function Proseso() {
                   height: "280px",
                   objectFit: "cover",
                   borderRadius: 2,
-                  mb: 2,
+                  mb: S.mp40,
                 }}
               />
-              <Typography fontSize={{ xs: S.fs24 }}>{item.title}</Typography>
-              <Typography>{item.subtitle}</Typography>
+              <Typography sx={{ pb: S.mp12 }} fontSize={{ xs: S.fs48 }}>
+                {item.title}
+              </Typography>
+              <Typography fontSize={{ xs: S.fs16 }}>{item.subtitle}</Typography>
             </Box>
           );
         })}
@@ -256,9 +242,10 @@ const style = {
     marginTop: S.sp32,
     gap: S.sp64,
   },
-  container: {
+  textBox: {
+    borderRadius: S.br4,
     backgroundColor: C.mainBlue,
-    py: { xs: "80px", md: "130px" },
+    py: { xs: 4, md: 8 },
     px: { xs: 2, sm: 4 },
   },
   parentBox: {
@@ -271,22 +258,19 @@ const style = {
     },
     gap: { xs: 2, sm: 3 },
     px: { xs: 2, sm: 4 },
-    pb: 8,
   },
   childBoxes: {
     display: "flex",
     flexDirection: "column",
     borderRadius: { xs: S.br4, md: S.br8, lg: S.br16 },
-    p: 2,
-    gap: 1.5,
+    p: "24px",
   },
-
   containerText: {
     color: "white",
-    fontSize: { xs: S.s18, sm: S.s24 },
+    fontSize: { xs: S.fs18, sm: S.fs24 },
   },
   text: {
-    fontSize: 28,
+    fontSize: { xs: S.fs48 },
     fontWeight: "bold",
     color: C.mainBrown,
     position: "relative",
@@ -302,5 +286,10 @@ const style = {
       borderRadius: 2,
       backgroundColor: "#5E3023",
     },
+  },
+  label: {
+    fontSize: { xs: S.fs16, md: S.fs18, lg: S.fs24 },
+    color: C.textBrown,
+    textAlign: "justify",
   },
 };
