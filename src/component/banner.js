@@ -36,7 +36,7 @@ export default function Banner() {
                     }}>
                         <Box component="img" src={logo} alt="logo" sx={{ height: 100, width: 100 }} />
                         <Typography sx={style.title}>
-                            E-BARIKS
+                            E-BARIKS:
                         </Typography>
                         <Typography sx={style.subtitle}> Pamanang Tradisyunal na Kabuhayan sa Bayan ng Vinzons, Camarines Norte</Typography>
                     </Box>
