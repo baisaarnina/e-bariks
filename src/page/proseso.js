@@ -288,8 +288,9 @@ const style = {
     },
   },
   label: {
-    fontSize: { xs: S.fs16, md: S.fs18, lg: S.fs24 },
-    color: C.textBrown,
+    fontSize:16,
+    // fontSize: { xs: S.fs16, md: S.fs18, lg: S.fs24 },
+    // color: C.textBrown,
     textAlign: "justify",
   },
 };

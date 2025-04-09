@@ -36,7 +36,7 @@ export default function Kasaysayan() {
   return (
     <Box sx={style.maincontainer}>
       <Typography sx={style.text}>KASAYSAYAN NG PAGABARIKS</Typography>
-      <MessageThread messages={messages} />
+      <MessageThread messages={messages} sx={{textAlign:'justify'}}/>
     </Box>
   );
 }
