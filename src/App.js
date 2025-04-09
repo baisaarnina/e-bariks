@@ -5,6 +5,7 @@ import Introduksyon from "./page/introduksyon";
 import Proseso from "./page/proseso";
 import Implikasyon from "./page/implikasyon";
 import Kasaysayan from "./page/kasaysayan";
+import Kontak from "./page/kontak";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/implikasyon at paniniwala" element={<Implikasyon />} />
         <Route path="/proseso" element={<Proseso />} />
         <Route path="/kasaysayan" element={<Kasaysayan />} />
+        <Route path="/kontak" element={<Kontak/>} />
       </Routes>
     </div>
   );
