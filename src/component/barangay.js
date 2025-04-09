@@ -8,8 +8,6 @@ import {
   CardActionArea,
   CardActions,
   Button,
-  Grid,
-  Modal,
 } from "@mui/material";
 import homeData from "../json/home.json";
 import { appbarHeight, pagePadding } from "../constant/constant";
@@ -17,6 +15,10 @@ import { appbarHeight, pagePadding } from "../constant/constant";
 import cagbalogo from "../assets/image/cagbalogo.png";
 import mangcayo from "../assets/image/mangcayo.png";
 import matango from "../assets/image/matango.png";
+
+import cagbalogo2 from "../assets/image/cagbalogo2.jpg";
+import mangcayo2 from "../assets/image/mangcayo2.jpg";
+import matango2 from "../assets/image/matango2.jpg";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion, AnimatePresence } from "framer-motion";
 import S from "../constant/sizes";
@@ -27,25 +29,25 @@ const brgy = [
   {
     id: 0,
     title: "Cagbalogo",
-    subtitle:
-      "Mahalagang bahagi na ng buhay ng mga lokal na mamamayan sa barangay Cagbalogo ang tradisyunal na pagbabariks. Isa ang komunidad ng Cagbalogo sa mga barangay sa munisipalidad ng Vinzons na mayroong malawak na taniman at pinagkukunan ng Sasa o nipa sa lalawigan. Hindi ito nakapagtataka dahil sa heograpiya ng lugar na malapit lamang sa baybaying-dagat at napapalibutan ng iba't ibang likas na yaman. Kaya't halos nakatuon  sa  sa mga gawaing may kinalaman sa kanilang kapaligiran at likas na yaman tulad ng pangingisda at pagninipa ang kanilang mga hanapbuhay. Ngunit karamihan sa mga lokal na pamilya rito ang umaasa sa paggawa ng tradisyunal na bariks bilang kanilang pangunahing kabuhayan at pinagkakakitaan. Ang Sasa o nipa na dominante sa kanilang lugar ang siyang naging isang pangunahing hilaw na materyales sa paggawa ng bariks. Hanggang sa kasalukuyan, patuloy itong ginagamit at masasalamin sa pang-araw-araw nilang buhay. Sa paglipas ng mga panahon, naging mahalagang bahagi na rin ito ng kanilang kultura at pamumuhay. Produktong patuloy na ibinebenta at ipinagmamalaki ng kanilang lugar. Kaya't kilala ang komunidad ng Cagbalogo bilang isa sa mga barangay sa Vinzons na mayroong pangunahing produksyon ng bariks. Ang barangay na ito ang maituturing na may malaking bentahan o pagawaan ng bariks dahil na rin sa heograpiya at lawak ng tumutubong Sasa o nipa sa kanilang lugar.",
+    subtitle: homeData.cagbalogo.text,
     image: cagbalogo,
+    image2: cagbalogo2,
     action: "",
   },
   {
     id: 1,
     title: "Mangcayo",
-    subtitle:
-      "Hindi magpapahuli ang barangay ng Mangcayo pagdating sa produksyon ng bariks sa lalawigan ng Camarines Norte. Kabilang ang barangay ng Mangcayo sa bayan ng Vinzons na sagana pagdating sa Sasa o nipa. Natural itong makikita sa kanilang mga lupain kaya't madali lamang na mapagkukunan ito ng mga hilaw na materyales na ginagamit sa paggawa ng bariks. Makikita agad ang matataas at makapal nitong mga dahon sa magkabilang gilid ng kalsada papunta pa lamang sa kanilang komunidad. Simpleng namumuhay ang mga mamamayan rito. Pawang agrikultural tulad ng pagtatanim o pagsasaka ang pangunahing kabuhayan. Ang paggawa ng bariks ang isa sa mga pangunahing kabuhayan nila hanggang sa kasalukuyang panahon. Nagkaroon ito ng mahalagang gampanin hindi lamang sa pamumuhay ng mga lokal na mamamayan kundi nakapag-ambag din sa makulay na kultura ng kanilang barangay. Hindi maitatanggi na masasalamin pa rin ang  produksyon ng bariks sa kanilang komunidad. Patuloy itong isinasabuhay at pinapatatag ng mga lokal na mamamayan sa barangay Mangcayo. Kaya't hindi maitatanggi na isa rin ang barangay na ito sa mga itinuturing na may malaking produksyon ng bariks katulad ng barangay Cagbalogo. Kung titingnan, hindi nagkakalayo ang dalawang barangay sa produksyon, sapagkat pareho silang nagsasagawa ng pagbabariks bilang kanilang pangunahing kabuhayan at pinagkakakitaan.  Ang barangay Mangcayo ang pangalawang maituturing na mayroong masagana at malawak na produksyon o paggawa ng bariks sa Vinzons.",
+    subtitle: homeData.mangcayo.text,
     image: mangcayo,
+    image2: mangcayo2,
     action: "",
   },
   {
     id: 2,
     title: "Matango",
-    subtitle:
-      " Isa ang barangay Matango sa mga komunidad sa bayan ng Vinzons, Camarines Norte na mayroong mahabang kasaysayan ng produksyon ng tradisyunal na pagbabariks katulad ng iba pang mga karatig barangay sa Vinzons. Karaniwang umaasa ang mga mamamayan dito sa agrikultura partikular na sa paggamit ng Sasa o nipa sa paggawa ng bariks. Bukod pa sa ibang kabuhayan tulad ng pagtatanim at pagbebenta ng mga kakanin, hindi rin maitatanggi na sagana ang barangay na ito sa lawak ng taniman ng Sasa o nipa na siyang nagsisilbing alternatibong kabuhayan at produktong pinagkakakitaan ng mga pamilya rito. Nagsisilbi itong mahalagang bahagi ng kultura at pamumuhay ng lokal na komunidad. Noon pa man, isa na itong tradisyunal na kabuhayan at produktong ibinebenta. Kilala na ito  sa mga lokal na pamilihan at dinarayo rin ng ilang mga turista at negosyante mula sa ibang lugar. Sa kabila ng mga hamon sa produksyon at pagpapanatili nito, patuloy na ang barangay Matango bilang ang isa sa mga kilalang barangay na nagbibigay ng kaukulang pansin at halaga nito bilang kabuhayan at pagkakakilanlan. Bukod pa sa naunang dalawang barangay, ang barangay Matango ang maituturing na pangatlong mayroong malaking produksyon ng bariks sa Vinzons. ",
+    subtitle: homeData.matango.text,
     image: matango,
+    image2: matango2,
     action: "",
   },
 ];
@@ -189,7 +191,7 @@ export default function Barangay() {
               />
               <Box
                 component="img"
-                src={selectedItem.image}
+                src={selectedItem.image2}
                 alt={selectedItem.title}
                 sx={{
                   height: "400px",
