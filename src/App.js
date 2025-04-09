@@ -4,6 +4,7 @@ import TopBar from './component/topbar';
 import { Routes, Route } from 'react-router-dom';
 import Introduksyon from './page/introduksyon';
 import Proseso from './page/proseso';
+import Implikasyon from './page/implikasyon';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <TopBar/>
       <Routes>
         <Route path='/' element={<Introduksyon/>}/>
+        <Route path='/implikasyon at paniniwala' element={<Implikasyon /> }/>
         <Route path='/proseso' element={<Proseso/>}/>
         </Routes>
     </div>
