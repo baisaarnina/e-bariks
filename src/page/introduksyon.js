@@ -1,20 +1,30 @@
 import React from "react";
 import Banner from "../component/banner";
-import { Box } from "@mui/material";
+import { Box , Divider} from "@mui/material";
 
 import C from '../constant/colors';
 import S from '../constant/sizes';
 import banner from '../assets/image/banner.png'
 import Pauna from "../component/pauna";
+import Intro from "../component/intro";
+import Barangay from "../component/barangay";
 
 
 export default function Introduksyon() {
     return (
         <Box xs={12} sx={style.maincontainer}>
-          <Banner/>
-          <Box sx={style.container}>
-            <Pauna/>
-          </Box>
+            <Banner />
+            <Box sx={style.container}>
+                <Pauna />
+            </Box>
+            <Intro />
+            <Box sx={style.container}>
+               <Barangay/>
+            </Box>
+            <Divider sx={{border: '2px solid',borderColor: C.mainBrown}}/>
+            <Box sx={{  textAlign: 'center', p:5}}>
+                Copyright © E-Bariks 2025
+            </Box>
         </Box>
     );
 }

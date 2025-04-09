@@ -2,13 +2,15 @@ import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import homeData from "../json/home.json";
 import Pauna1 from "../assets/image/pauna1.png";
+import tuba from "../assets/image/tuba.jpg";
+
 import { appbarHeight, pagePadding } from "../constant/constant";
 
 export default function Pauna() {
   return (
     <Box sx={style.maincontainer}>
-      <Box sx={style.container}>
-        <Box xs={12} md={6} textAlign='justify'>
+      <Box sx={{...style.container, mb:10}}>
+        <Box xs={12} md={6} textAlign='justify' width='50%'>
           <Typography
             sx={{
               fontSize: 28,
@@ -38,7 +40,7 @@ export default function Pauna() {
             {homeData.pauna2.text}
           </Typography>
         </Box>
-        <Box xs={12} md={6}>
+        <Box xs={12} md={6} width='50%'>
           <Box
             component="img"
             src={Pauna1}
@@ -46,10 +48,31 @@ export default function Pauna() {
             sx={{
               width: '100%',
               height: '100%',
-              objectFit: 'cover',
               borderRadius: 2,
             }}
           />
+        </Box>
+      </Box>
+      <Box sx={style.container}>
+        <Box xs={12} md={6} width='50%'>
+          <Box
+            component="img"
+            src={tuba}
+            alt="Paunang Salita"
+            sx={{
+              width: '100%',
+              height: '100%',
+              borderRadius: 2,
+            }}
+          />
+        </Box>
+        <Box xs={12} md={6} textAlign='justify' width='50%'>
+          <Typography sx={{ fontSize: 16, marginBottom: 2 }}>
+            {homeData.pauna3.text}
+          </Typography>
+          <Typography sx={{ fontSize: 16 }}>
+            {homeData.pauna4.text}
+          </Typography>
         </Box>
       </Box>
     </Box>
@@ -67,7 +90,7 @@ const style = {
   container: {
     display: 'flex',
     flexDirection: 'row',
-    gap: 2
+    gap: 4,
   }
 
 }
