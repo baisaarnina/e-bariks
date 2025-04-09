@@ -10,7 +10,6 @@ const MessageThread = ({ messages }) => {
         position: "relative",
         px: 4,
         py: 10,
-        backgroundColor: "#fffaf5",
       }}
     >
       <Box
@@ -40,12 +39,7 @@ const MessageThread = ({ messages }) => {
             {!isLeft ? (
               <>
                 <Box sx={{ width: "40%", pr: 4, textAlign: "right" }}>
-                  <Typography
-                    variant="body1"
-                    sx={{ color: "#333", fontSize: "1rem" }}
-                  >
-                    {msg.text}
-                  </Typography>
+                  <Typography sx={style.label}>{msg.text}</Typography>
                 </Box>
 
                 <Box
@@ -105,12 +99,7 @@ const MessageThread = ({ messages }) => {
                   />
                 </Box>
                 <Box sx={{ width: "45%", pl: 4, textAlign: "left" }}>
-                  <Typography
-                    variant="body1"
-                    sx={{ color: "#333", fontSize: "1rem" }}
-                  >
-                    {msg.text}
-                  </Typography>
+                  <Typography sx={style.label}>{msg.text}</Typography>
                 </Box>
               </>
             )}
@@ -122,3 +111,10 @@ const MessageThread = ({ messages }) => {
 };
 
 export default MessageThread;
+
+const style = {
+  label: {
+    fontSize: { xs: S.fs24 },
+    color: C.mainBrown,
+  },
+};

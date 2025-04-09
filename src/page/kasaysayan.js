@@ -1,42 +1,62 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import MessageThread from "../component/messageThread";
+import { pagePadding } from "../constant/constant";
+import S from "../constant/sizes";
+import C from "../constant/colors";
 
 const messages = [
   {
-    text: "Marami ang may ugnay na ang paggawa ng tradisyonal na balut sa mga lokal na pamahalaan ng mga lalawigan sa Pilipinas. Bago pa man dumating ang mga Kastila sa bansa, ang mga sinaunang Pilipino ay gumagawa na ng balut at iba pang produktong pagkain. Sa mga lumang tala, ipinapakita na ang paggawa ng balut ay isang mahalagang bahagi ng kulturang Pilipino, hindi lamang bilang pagkain kundi bilang bahagi ng kabuhayan ng maraming pamilya. Sa pagdaan ng panahon, ang kasanayang ito ay naipasa mula henerasyon sa henerasyon, hanggang sa ito ay umabot sa kasalukuyang henerasyon ng mga gumagawa ng balut.",
+    text: "Matagal nang na-uugnay ang paggawa ng tradisyunal na bariks sa mga lokal na mamamayan ng Vinzons, Camarines Norte. Sa bawat salinlahi, ang tradisyunal na paraan ng paggawa nito ay patuloy na isinasagawa, na siyang nagiging bahagi ng kanilang pamumuhay at kultura. Ang bariks, isang inuming alak na gawa sa Sasa o nipa, ay isang mahalagang pamanang kabuhayan na natatangi sa mga barangay ng Vinzons. Sa kabila ng paglipas ng panahon at ang pag-usbong ng makabagong teknolohiya, nananatiling buhay at matatag ang kasanayan sa paggawa ng bariks.",
   },
   {
-    text: "Noong unang panahon, ang balut ay naging isa sa kabuhayan ng mga tao sa iba't ibang bahagi ng Pilipinas. Isa itong mahalagang produkto na iniluluwas sa ibang lugar, partikular na sa mga palengke sa Maynila. Ang mga lalawigan gaya ng Pateros ay kilalang tagagawa ng balut, at ito ay naging bahagi ng kanilang pagkakakilanlan. Dahil dito, nagkaroon ng mga pagsisikap upang mapabuti ang paggawa ng balut. Mula sa manu-manong paggawa hanggang sa paggamit ng mga makina, dumaan sa maraming pagbabago ang industriya ng balut.",
+    text: "Noong unang panahon, ang sasa o nipa ay tumutubo ng masagana sa mga baybaying-dagat at latian sa Vinzons. Dahil sa lokasyon ng kanilang mga barangay, ang mga mamamayan dito ay natutong gamitin ang mga halamang ito hindi lamang bilang materyales para sa iba’t ibang gamit, kundi bilang hilaw na sangkap sa paggawa ng bariks. Ayon sa mga kuwento ng matatanda, mula sa mga ninuno nila, natutunan ang kaalaman sa paggawa ng inuming ito, at sa paglipas ng mga taon, naging bahagi ito ng kanilang kabuhayan.",
   },
   {
-    text: "Ang kaalaman sa paggawa ng balut ay nagsimula sa kaalaman ng mga ninuno. Ito ay isang tradisyon na ipinamana mula sa mga magulang patungo sa kanilang mga anak. Ang mga bata ay natututo sa pamamagitan ng panonood at pagtulong sa kanilang mga magulang. Sa ganitong paraan, unti-unting natutunan ng bagong henerasyon ang tamang proseso ng paggawa ng balut — mula sa pag-aalaga ng itlog ng itik, pagsisigurado ng tamang temperatura, hanggang sa tamang oras ng paglalaga. Ang lahat ng ito ay mahalagang bahagi ng isang pamana ng kultura.",
+    text: 'Ang kasanayan sa paggawa ng bariks ay nagmula pa sa kanilang mga ninuno, gayunpaman may ilang nagsasabi na may mga kilalang tao sa komunidad ng bayan ng Vinzons na siyang nagpasimula ng ganitong kabuhayan sa lugar. Ang ilan pa nga ay nagbigay ng mga detalye tungkol sa pangalan ng mga taong unang nagpasimula ng paggawa ng bariks mula sa Sasa. "Bariks" o "barikolkol," ang pangalan ng inuming ito, ay naging popular sa buong lugar, at ito ay tanging hindi gawa sa niyog, kaya\'t itinuturing itong kakaibang lokal na alak kumpara sa lambanog.',
   },
   {
-    text: "Ang paggawa ng balut ay likas na bahagi rin ng maraming komunidad sa iba't ibang rehiyon. Sa bawat rehiyon, may kani-kaniyang istilo at pamamaraan ng paggawa ng balut. Ang ilan ay gumagamit ng tradisyonal na pag-init gamit ang ipa ng palay, samantalang ang iba ay gumagamit ng mga incubator. Anuman ang pamamaraan, ang layunin ay pareho — ang makagawa ng balut na may magandang kalidad. Sa mga probinsya, ang paggawa ng balut ay hindi lamang trabaho kundi isa ring pamumuhay.",
+    text: "Ang paggawa ng bariks sa Vinzons ay naging isang makulay na bahagi ng kasaysayan ng kanilang bayan. Bagaman hindi malinaw kung kailan talaga ito nagsimula, ayon sa mga impormante, ang industriya ng bariks ay umusbong noong dekada 50’s o 60’s, at sa kabila ng mga pagsubok sa pag-unlad ng makabagong teknolohiya, nanatili itong isang mahalagang kabuhayan sa Vinzons. ",
   },
   {
-    text: "Ang lokal na pamahalaan ay may ginagampanang papel sa pag-unlad ng industriya ng balut. May mga pagsasanay at programang iniaalok para sa mga nais matutong gumawa ng balut. Bukod dito, may mga patakaran ding ipinatutupad upang masiguro ang kalinisan at kalidad ng produkto. Sa tulong ng mga ahensya ng gobyerno, tulad ng DTI at DA, nabibigyan ng suporta ang mga maliliit na negosyante. Ito ay nagbibigay daan sa mas maunlad na produksyon at mas malawak na distribusyon ng balut sa iba't ibang lugar sa bansa.",
+    text: "Ang tradisyunal na paggawa ng bariks ay patuloy na isinasagawa sa kabila ng modernisasyon. Bagaman walang mga organisasyon o grupo na sumusuporta sa paggawa ng bariks, ito ay nananatiling buhay sa kanilang mga komunidad. Isinasabuhay nila ito bilang isang makulay na tradisyon, na ipinasa mula sa mga magulang at ninuno. Hindi ito naging hadlang sa mga pagsubok ng panahon, kundi nagsilbing simbolo ng kanilang dedikasyon at kasipagan.",
   },
   {
-    text: "Ang pagbabarik ay bahagi rin ng kultura ng Pilipinas. Sa bawat barangay, may mga taong gumagawa ng balut bilang kanilang hanapbuhay. Sa kabila ng makabagong teknolohiya, nananatiling buhay ang tradisyong ito dahil sa kahalagahan nito sa kabuhayan ng maraming Pilipino. Patuloy itong tinatangkilik ng mamamayan at tinutulungan ng pamahalaan upang mapanatili ang kalidad at kasaysayan ng produktong ito.",
+    text: "Sa mga kwento ng mga impormante, isang mahalagang detalye ang lumitaw: karamihan sa kanila ay natuto ng paggawa ng bariks mula sa murang edad, mula 11 hanggang 18 taong gulang. Nagsimula sila sa pamamagitan ng pagmamasid sa mga nakatatandang miyembro ng pamilya o sa mga bihasa sa paggawa ng bariks sa kanilang barangay. Ang kaalaman ay hindi pormal, kundi natutunan sa pamamagitan ng pagsasanay at praktikal na aplikasyon. Marami sa kanila ang mga pamilyang matagal nang gumagawa ng bariks, at ipinasa ang kasanayan mula sa isang henerasyon hanggang sa susunod. Sa ganitong paraan, naging bahagi ng kanilang araw-araw na buhay ang paggawa ng bariks, at marami sa kanila ang nagsasabing walang makapipigil sa kanilang dedikasyon sa gawaing ito.",
   },
   {
-    text: "Sa kabila ng mga pagbabago sa panahon, patuloy ang pag-usbong ng industriya ng pagbabarik. Sa pamamagitan ng teknolohiya, mas napapadali ang paggawa at mas napapabuti ang kalidad ng balut. Sa kasalukuyan, patuloy ang mga inobasyon upang mas mapalago pa ang industriya at mapanatili ang kahalagahan nito.",
+    text: "Ngunit, may ilang kuwento rin mula sa mga nagmula sa ibang lugar na nagsasabing natutunan nila ang paggawa ng bariks matapos silang mag-asawa ng mga taga-Vinzons. Isinasalaysay nila na mula sa pagmamasid at pagtuturo ng mga lokal, natutunan nilang gawin ang inuming ito at kalaunan ay naging bihasa na rin sa paggawa ng bariks.",
+  },
+  {
+    text: "Sa kabila ng mga pagsubok at pagbabago, patuloy ang tradisyunal na paggawa ng bariks sa Vinzons—isang buhay na patunay ng kasaysayan, kultura, at pagmamahal sa kanilang mga ninuno.",
   },
 ];
 
 export default function Kasaysayan() {
   return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        backgroundColor: "#fce5d3",
-        overflowY: "auto",
-        py: 4,
-      }}
-    >
+    <Box sx={style.maincontainer}>
+      <Typography sx={style.text}>KASAYSAYAN NG PAGABARIKS</Typography>
       <MessageThread messages={messages} />
     </Box>
   );
 }
+
+const style = {
+  maincontainer: {
+    display: "flex",
+    flexDirection: "column",
+    backgroundColor: C.primarybackground,
+    position: "relative",
+    overflow: "hidden",
+    padding: pagePadding,
+    marginTop: S.sp32,
+    gap: S.sp64,
+  },
+  text: {
+    fontSize: { xs: S.fs48 },
+    fontWeight: "bold",
+    color: C.mainBrown,
+    position: "relative",
+    display: "inline-block",
+  },
+};
