@@ -3,6 +3,7 @@ import './App.css';
 import TopBar from './component/topbar';
 import { Routes, Route } from 'react-router-dom';
 import Introduksyon from './page/introduksyon';
+import Proseso from './page/proseso';
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       <TopBar/>
       <Routes>
         <Route path='/' element={<Introduksyon/>}/>
-      </Routes>
+        <Route path='/proseso' element={<Proseso/>}/>
+        </Routes>
     </div>
   );
 }
