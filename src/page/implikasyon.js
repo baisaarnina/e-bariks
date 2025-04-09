@@ -107,47 +107,64 @@ function Implikasyon() {
                             SA BARIKS
                         </Typography>
                     </Box>
-
-                    <Grid container spacing={S.sp32} sx={{
+                    <Box sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
                     }}>
-                        <Grid item size={6} >
-                            <Typography sx={{
-                                color: '#FDE5D4',
-                                textAlign: 'justify',
-                                whiteSpace: 'pre-wrap',
-                                fontSize: 16,
-                                
-                            }}>
-                                {implikasyonText.paniniwala}
-                            </Typography>
-                        </Grid>
-                        <Grid container item size={6} >
-                            <Grid item size={12}>
-                                <Box
-                                    component='img'
-                                    src={paniniwalaOne}
-                                    sx={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover',
-                                        objectPosition: 'center 12%'
-                                    }}
-                                />
-                            </Grid>
-                            <Grid item size={12}>
-                                <Box
-                                    component='img'
-                                    src={banner}
-                                    sx={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover',
-                                        objectPosition: 'center 12%'
-                                    }}
-                                />
-                            </Grid>
-                        </Grid>
-                    </Grid>
+                        <Typography sx={{
+                            color: '#FDE5D4',
+                            textAlign: 'justify',
+                            whiteSpace: 'pre-wrap',
+                            fontSize: 16,
+                            padding: '1.5rem',
+                            lineHeight: '1.8',
+                            letterSpacing: '0.5px',
+                        }}>
+                            {implikasyonText.paniniwalaOne}
+                        </Typography>
+                        <Box
+                            component='img'
+                            src={paniniwalaOne}
+                            sx={{
+                                width: '100%',
+                                height: '280px',
+                                objectFit: 'cover',
+                                objectPosition: 'center 22%'
+                            }}
+                        />
+                        <Typography sx={{
+                            color: '#FDE5D4',
+                            textAlign: 'justify',
+                            whiteSpace: 'pre-wrap',
+                            fontSize: 16,
+                            padding: '1.5rem',
+                            lineHeight: '1.8',
+                            letterSpacing: '0.5px',
+                        }}>
+                            {implikasyonText.paniniwalaTwo}
+                        </Typography>
+                        <Box
+                            component='img'
+                            src={banner}
+                            sx={{
+                                width: '100%',
+                                height: '420px',
+                                objectFit: 'cover',
+                                objectPosition: 'center 20%'
+                            }}
+                        />
+                        <Typography sx={{
+                            color: '#FDE5D4',
+                            textAlign: 'justify',
+                            whiteSpace: 'pre-wrap',
+                            fontSize: 16,
+                            padding: '1.5rem',
+                            lineHeight: '1.8',
+                            letterSpacing: '0.5px',
+                        }}>
+                            {implikasyonText.paniniwalaThree}
+                        </Typography>
+                    </Box>
                 </Box>
             </Box>
         </Box>

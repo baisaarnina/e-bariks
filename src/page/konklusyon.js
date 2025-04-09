@@ -34,7 +34,7 @@ function Konklusyon() {
                     KONKLUSYON
                 </Typography>
                 <Typography sx={{
-                    color: C.mainBrown,
+                    color: C.mainBlue,
                     textAlign: 'justify',
                     fontSize: 16,
                     whiteSpace: 'pre-wrap',
