@@ -6,15 +6,17 @@ import C from '../constant/colors';
 import S from '../constant/sizes';
 import banner from '../assets/image/banner.png'
 import Pauna from "../component/pauna";
+import Intro from "../component/intro";
 
 
 export default function Introduksyon() {
     return (
         <Box xs={12} sx={style.maincontainer}>
-          <Banner/>
-          <Box sx={style.container}>
-            <Pauna/>
-          </Box>
+            <Banner />
+            <Box sx={style.container}>
+                <Pauna />
+            </Box>
+            <Intro />
         </Box>
     );
 }
