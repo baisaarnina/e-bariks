@@ -1,3 +1,6 @@
 const C = {
-    mainbrown:'#5E3023',
+    mainBrown:'#5E3023',
+    mainBlue: '#001524',
 }
+
+export default C;
