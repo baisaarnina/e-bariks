@@ -214,13 +214,13 @@ export default function Proseso() {
                   height: "280px",
                   objectFit: "cover",
                   borderRadius: 2,
-                  mb: "40px",
+                  mb: S.mp40,
                 }}
               />
-              <Typography sx={{ pb: S.s12 }} fontSize={{ xs: S.fs24 }}>
+              <Typography sx={{ pb: S.mp12 }} fontSize={{ xs: S.fs48 }}>
                 {item.title}
               </Typography>
-              <Typography>{item.subtitle}</Typography>
+              <Typography fontSize={{ xs: S.fs16 }}>{item.subtitle}</Typography>
             </Box>
           );
         })}
@@ -242,14 +242,12 @@ const style = {
     marginTop: S.sp32,
     gap: S.sp64,
   },
-
   textBox: {
     borderRadius: S.br4,
     backgroundColor: C.mainBlue,
     py: { xs: 4, md: 8 },
     px: { xs: 2, sm: 4 },
   },
-
   parentBox: {
     display: "grid",
     gridTemplateColumns: {
@@ -261,20 +259,18 @@ const style = {
     gap: { xs: 2, sm: 3 },
     px: { xs: 2, sm: 4 },
   },
-
   childBoxes: {
     display: "flex",
     flexDirection: "column",
     borderRadius: { xs: S.br4, md: S.br8, lg: S.br16 },
     p: "24px",
   },
-
   containerText: {
     color: "white",
     fontSize: { xs: S.fs18, sm: S.fs24 },
   },
   text: {
-    fontSize: S.fs28,
+    fontSize: { xs: S.fs48 },
     fontWeight: "bold",
     color: C.mainBrown,
     position: "relative",
@@ -291,7 +287,6 @@ const style = {
       backgroundColor: "#5E3023",
     },
   },
-
   label: {
     fontSize: { xs: S.fs16, md: S.fs18, lg: S.fs24 },
     color: C.textBrown,
