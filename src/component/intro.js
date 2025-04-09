@@ -52,11 +52,6 @@ export default function Intro() {
                 </Box>
 
             </Box>
-            {/* <Box xs={12} md={6} textAlign='justify' >
-            <Typography sx={{ fontSize: 16 , color:'white'}}>
-                {homeData.inrtro2.text}
-            </Typography>
-            </Box> */}
         </Box>
     )
 }

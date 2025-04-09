@@ -7,6 +7,7 @@ import S from '../constant/sizes';
 import banner from '../assets/image/banner.png'
 import Pauna from "../component/pauna";
 import Intro from "../component/intro";
+import Barangay from "../component/barangay";
 
 
 export default function Introduksyon() {
@@ -17,6 +18,9 @@ export default function Introduksyon() {
                 <Pauna />
             </Box>
             <Intro />
+            <Box sx={style.container}>
+               <Barangay/>
+            </Box>
         </Box>
     );
 }
