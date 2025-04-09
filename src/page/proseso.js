@@ -18,6 +18,8 @@ const pictures = [
   require("../assets/image/sasa_o_nipa.png"),
 ];
 
+const itemsPerRow = 4;
+
 const kasangkapan = [
   {
     path: pictures[0],
@@ -77,7 +79,7 @@ export default function Proseso() {
           py: { xs: 6, md: "100px" },
         }}
       >
-        <Typography variant="h4" color="initial" sx={style.text} gutterBottom>
+        <Typography color="initial" sx={style.text} gutterBottom>
           PROSESO NG PAGBABARIKS
         </Typography>
 
@@ -128,7 +130,6 @@ export default function Proseso() {
             </Box>
           </Box>
           <Typography
-            variant="h5"
             color="initial"
             fontSize={{ xs: "18px", md: "24px" }}
             sx={{ textAlign: "justify" }}
@@ -146,7 +147,6 @@ export default function Proseso() {
           }}
         >
           <Typography
-            variant="h5"
             color="initial"
             fontSize={{ xs: "18px", md: "24px" }}
             sx={{ textAlign: "justify" }}
@@ -196,13 +196,12 @@ export default function Proseso() {
       </Box>
 
       <Box sx={style.container}>
-        <Typography variant="h6" color="initial" sx={style.containerText}>
+        <Typography color="initial" sx={style.containerText}>
           {T.text3}
         </Typography>
       </Box>
 
       <Typography
-        variant="h4"
         color="initial"
         sx={{ ...style.text, px: { xs: 2, sm: 4 } }}
         gutterBottom
@@ -211,24 +210,34 @@ export default function Proseso() {
       </Typography>
 
       <Box sx={style.parentBox}>
-        {kasangkapan.map((item, index) => (
-          <Box key={index} sx={style.childBoxes}>
+        {kasangkapan.map((item, index) => {
+          const row = Math.floor(index / itemsPerRow);
+          const col = index % itemsPerRow;
+          const isEven = (row + col) % 2 === 0;
+          return (
             <Box
-              component="img"
-              src={item.path}
-              alt={item.title}
-              sx={{
-                width: "100%",
-                height: "280px",
-                objectFit: "cover",
-                borderRadius: 2,
-                mb: 2,
-              }}
-            />
-            <Typography>{item.title}</Typography>
-            <Typography>{item.subtitle}</Typography>
-          </Box>
-        ))}
+              key={index}
+              bgcolor={isEven ? C.mainBrown : C.mainBlue}
+              color="white"
+              sx={style.childBoxes}
+            >
+              <Box
+                component="img"
+                src={item.path}
+                alt={item.title}
+                sx={{
+                  width: "100%",
+                  height: "280px",
+                  objectFit: "cover",
+                  borderRadius: 2,
+                  mb: 2,
+                }}
+              />
+              <Typography fontSize={{ xs: S.fs24 }}>{item.title}</Typography>
+              <Typography>{item.subtitle}</Typography>
+            </Box>
+          );
+        })}
       </Box>
 
       {/* BODY END */}
@@ -265,8 +274,6 @@ const style = {
     pb: 8,
   },
   childBoxes: {
-    bgcolor: "lightgray",
-    height: { xs: "300px", md: "400px", lg: "535px" },
     display: "flex",
     flexDirection: "column",
     borderRadius: { xs: S.br4, md: S.br8, lg: S.br16 },
@@ -279,7 +286,21 @@ const style = {
     fontSize: { xs: S.s18, sm: S.s24 },
   },
   text: {
-    fontSize: { xs: S.s32, sm: S.s40, md: S.s48 },
-    fontWeight: "500",
+    fontSize: 28,
+    fontWeight: "bold",
+    color: C.mainBrown,
+    position: "relative",
+    display: "inline-block",
+    marginBottom: 2,
+    "&::after": {
+      content: '""',
+      position: "absolute",
+      left: 0,
+      bottom: -4,
+      width: "100%",
+      height: "2px",
+      borderRadius: 2,
+      backgroundColor: "#5E3023",
+    },
   },
 };
