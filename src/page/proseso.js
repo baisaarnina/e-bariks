@@ -28,7 +28,7 @@ const kasangkapan = [
   },
   {
     path: pictures[1],
-    title: "BUMBUNG",
+    title: "BUMBONG",
     subtitle:
       "Kawayan na ginagamit na nagsisilbing pangsahod sa tuba mula sa Sasa. ",
   },
@@ -64,7 +64,8 @@ const kasangkapan = [
   {
     path: pictures[7],
     title: "SASA O NIPA",
-    subtitle: " Isang halaman  na naglalabas ng tu",
+    subtitle:
+      "Isang halaman na naglalabas ng tubo, pangunahing ginagamit sa paggawa ng mga bariks na ginagamit sa bubong at iba pang konstruksyon.",
   },
 ];
 
@@ -221,7 +222,7 @@ export default function Proseso() {
                 />
                 <Typography
                   sx={{ pb: S.mp12 }}
-                  fontSize={{ xs: S.fs24, md: S.fs28, lg: S.fs48 }}
+                  fontSize={{ xs: S.fs24, md: S.fs28, lg: S.fs36 }}
                 >
                   {item.title}
                 </Typography>
