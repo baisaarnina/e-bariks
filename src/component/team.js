@@ -12,7 +12,7 @@ import Christine from '../assets/image/christine.jpg'
 const team = [
   {
     id: 1,
-    profile: France,
+    profile: Christine,
     name: "France Mae Magana Cereno",
     kurso: "Batsilyer sa Agham ng Edukasyong Pansekundarya Medyor sa Filipino",
     email: "cerenofrancemae@gmail.com",
@@ -22,7 +22,7 @@ const team = [
   },
   {
     id: 2,
-    profile: Christine,
+    profile: France,
     name: "Christine C. Cuevas ",
     kurso: "Batsilyer sa Agham ng Edukasyong Pansekundarya Medyor sa Filipino",
     email: "tincuevas03@gmail.com",
