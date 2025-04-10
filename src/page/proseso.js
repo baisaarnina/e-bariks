@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Card, CardContent, CardMedia } from "@mui/material";
 import StatueSrc from "../assets/image/image_statue.png";
 import PlantSrc from "../assets/image/image_plant.png";
 
@@ -193,37 +193,45 @@ export default function Proseso() {
         MGA KASANGKAPANG GINAGAMIT SA PAGBABARIKS
       </Typography>
 
-      <Box sx={style.parentBox}>
-        {kasangkapan.map((item, index) => {
-          const row = Math.floor(index / itemsPerRow);
-          const col = index % itemsPerRow;
-          const isEven = (row + col) % 2 === 0;
-          return (
-            <Box
-              key={index}
-              bgcolor={isEven ? C.mainBrown : C.mainBlue}
-              color="white"
-              sx={style.childBoxes}
-            >
+      <Box sx={{ display: "flex", justifyContent: "center", px: 2 }}>
+        <Box sx={style.parentBox}>
+          {kasangkapan.map((item, index) => {
+            const row = Math.floor(index / itemsPerRow);
+            const col = index % itemsPerRow;
+            const isEven = (row + col) % 2 === 0;
+
+            return (
               <Box
-                component="img"
-                src={item.path}
-                alt={item.title}
-                sx={{
-                  width: "100%",
-                  height: "280px",
-                  objectFit: "cover",
-                  borderRadius: 2,
-                  mb: S.mp40,
-                }}
-              />
-              <Typography sx={{ pb: S.mp12 }} fontSize={{ xs: S.fs48 }}>
-                {item.title}
-              </Typography>
-              <Typography fontSize={{ xs: S.fs16 }}>{item.subtitle}</Typography>
-            </Box>
-          );
-        })}
+                key={index}
+                bgcolor={isEven ? C.mainBrown : C.mainBlue}
+                color="white"
+                sx={style.childBoxes}
+              >
+                <Box
+                  component="img"
+                  src={item.path}
+                  alt={item.title}
+                  sx={{
+                    width: "auto",
+                    height: "200px",
+                    objectFit: "cover",
+                    borderRadius: 2,
+                    mb: 2,
+                  }}
+                />
+                <Typography
+                  sx={{ pb: S.mp12 }}
+                  fontSize={{ xs: S.fs24, md: S.fs28, lg: S.fs48 }}
+                >
+                  {item.title}
+                </Typography>
+                <Typography fontSize={{ xs: S.fs16 }}>
+                  {item.subtitle}
+                </Typography>
+              </Box>
+            );
+          })}
+        </Box>
       </Box>
 
       {/* BODY END */}
@@ -257,20 +265,31 @@ const style = {
       lg: "repeat(4, 1fr)",
     },
     gap: { xs: 2, sm: 3 },
-    px: { xs: 2, sm: 4 },
+    width: "100%",
+    maxWidth: "1600px",
+    mx: "auto",
+    boxSizing: "border-box",
+    overflow: "hidden",
   },
+
   childBoxes: {
     display: "flex",
     flexDirection: "column",
     borderRadius: { xs: S.br4, md: S.br8, lg: S.br16 },
     p: "24px",
+    height: "100%",
+    minHeight: "auto",
+    boxSizing: "border-box",
+    wordBreak: "break-word",
+    maxWidth: "100%",
   },
+
   containerText: {
     color: "white",
     fontSize: { xs: S.fs18, sm: S.fs24 },
   },
   text: {
-    fontSize: { xs: S.fs48 },
+    fontSize: { xs: S.fs24, md: S.fs28, lg: S.fs48 },
     fontWeight: "bold",
     color: C.mainBrown,
     position: "relative",
@@ -288,9 +307,7 @@ const style = {
     },
   },
   label: {
-    fontSize:16,
-    // fontSize: { xs: S.fs16, md: S.fs18, lg: S.fs24 },
-    // color: C.textBrown,
+    fontSize: S.fs16,
     textAlign: "justify",
   },
 };
