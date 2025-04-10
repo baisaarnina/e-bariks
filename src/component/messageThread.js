@@ -3,6 +3,8 @@ import { Box, Typography } from "@mui/material";
 import S from "../constant/sizes";
 import C from "../constant/colors";
 
+import image from '../assets/image/kasaysayanOne.png';
+
 const MessageThread = ({ messages }) => {
   return (
     <Box
@@ -60,9 +62,18 @@ const MessageThread = ({ messages }) => {
             {!isLeft ? (
               <>
                 <Box sx={{ width: "47%", pr: 4, textAlign: "right" }}>
-                  <Typography sx={style.label}>{msg.text}</Typography>
+                  <Typography sx={{
+                    color: C.mainBlue,
+                    textAlign: 'justify',
+                    fontSize: 16,
+                    whiteSpace: 'pre-wrap',
+                    padding: '1.5rem',
+                    lineHeight: '1.8',
+                    letterSpacing: '0.5px',
+                  }}>
+                    {msg.text}
+                  </Typography>
                 </Box>
-
                 <Box
                   sx={{
                     width: "5%",
@@ -89,11 +100,36 @@ const MessageThread = ({ messages }) => {
                   />
                 </Box>
 
-                <Box sx={{ width: "55%" }} />
+                <Box sx={{ width: "55%" }}>
+                  <Box
+                    component='img'
+                    src={require(`../assets/image/${msg.image}`)}
+                    sx={{
+                      borderRadius: '16px',
+                      width: '80%',
+                      height: '80%',
+                      objectFit: 'cover',
+                      objectPosition: 'center 12%'
+                    }}
+                  />
+                </Box>
               </>
             ) : (
               <>
-                <Box sx={{ width: "53%" }} />
+                <Box sx={{ width: "53%" }} >
+                  <Box
+                    component='img'
+                    src={require(`../assets/image/${msg.image}`)}
+                    sx={{
+                      borderRadius: '16px',
+                      width: '80%',
+                      height: '80%',
+                      objectFit: 'cover',
+                      objectPosition: 'center 12%'
+                    }}
+                  />
+                </Box>
+
                 <Box
                   sx={{
                     width: "5%",
@@ -120,7 +156,17 @@ const MessageThread = ({ messages }) => {
                   />
                 </Box>
                 <Box sx={{ width: "45%", pl: 4, textAlign: "left" }}>
-                  <Typography sx={style.label}>{msg.text}</Typography>
+                  <Typography sx={{
+                    color: C.mainBlue,
+                    textAlign: 'justify',
+                    fontSize: 16,
+                    whiteSpace: 'pre-wrap',
+                    padding: '1.5rem',
+                    lineHeight: '1.8',
+                    letterSpacing: '0.5px',
+                  }}>
+                    {msg.text}
+                  </Typography>
                 </Box>
               </>
             )}
