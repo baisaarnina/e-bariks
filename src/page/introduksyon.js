@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../component/banner";
-import { Box } from "@mui/material";
+import { Box , Divider} from "@mui/material";
 
 import C from '../constant/colors';
 import S from '../constant/sizes';
@@ -20,6 +20,10 @@ export default function Introduksyon() {
             <Intro />
             <Box sx={style.container}>
                <Barangay/>
+            </Box>
+            <Divider sx={{border: '2px solid',borderColor: C.mainBrown}}/>
+            <Box sx={{  textAlign: 'center', p:5}}>
+                Copyright © E-Bariks 2025
             </Box>
         </Box>
     );
