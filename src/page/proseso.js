@@ -64,8 +64,7 @@ const kasangkapan = [
   {
     path: pictures[7],
     title: "SASA O NIPA",
-    subtitle:
-      "Isang halaman na naglalabas ng tubo, pangunahing ginagamit sa paggawa ng mga bariks na ginagamit sa bubong at iba pang konstruksyon.",
+    subtitle: " Isang halaman  na naglalabas ng tu",
   },
 ];
 
@@ -263,11 +262,11 @@ const style = {
       xs: "repeat(1, 1fr)",
       sm: "repeat(2, 1fr)",
       md: "repeat(3, 1fr)",
-      lg: "repeat(4, 1fr)",
+      lg: "repeat(auto-fill, minmax(250px, 1fr))",
     },
     gap: { xs: 2, sm: 3 },
     width: "100%",
-    maxWidth: "1600px",
+    maxWidth: "1300px",
     mx: "auto",
     boxSizing: "border-box",
     overflow: "hidden",
