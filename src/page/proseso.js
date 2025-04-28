@@ -28,7 +28,7 @@ const kasangkapan = [
   },
   {
     path: pictures[1],
-    title: "BUMBUNG",
+    title: "BUMBONG",
     subtitle:
       "Kawayan na ginagamit na nagsisilbing pangsahod sa tuba mula sa Sasa. ",
   },
@@ -221,7 +221,7 @@ export default function Proseso() {
                 />
                 <Typography
                   sx={{ pb: S.mp12 }}
-                  fontSize={{ xs: S.fs24, md: S.fs28, lg: S.fs48 }}
+                  fontSize={{ xs: S.fs24, md: S.fs28, lg: S.fs36 }}
                 >
                   {item.title}
                 </Typography>
@@ -262,11 +262,11 @@ const style = {
       xs: "repeat(1, 1fr)",
       sm: "repeat(2, 1fr)",
       md: "repeat(3, 1fr)",
-      lg: "repeat(4, 1fr)",
+      lg: "repeat(auto-fill, minmax(250px, 1fr))",
     },
     gap: { xs: 2, sm: 3 },
     width: "100%",
-    maxWidth: "1600px",
+    maxWidth: "1300px",
     mx: "auto",
     boxSizing: "border-box",
     overflow: "hidden",
