@@ -64,7 +64,7 @@ const kasangkapan = [
   {
     path: pictures[7],
     title: "SASA O NIPA",
-    subtitle: " Isang halaman  na naglalabas ng tu",
+    subtitle: " Isang halaman  na naglalabas ng tuba.",
   },
 ];
 
