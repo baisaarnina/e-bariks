@@ -102,7 +102,7 @@ export default function Barangay() {
           <Card
             key={index}
             sx={{
-              width: "300px",
+              width: "calc(100%/3)",
               backgroundColor: cardColors[index % cardColors.length],
               display: "flex",
               flexDirection: "column",
@@ -250,8 +250,8 @@ const style = {
   container: {
     flexDirection: "row",
     display: "flex",
-    flexWrap: "wrap",
+    // flexWrap: "wrap",
     justifyContent: "center",
-    gap: 3,
+    gap: 2,
   },
 };
