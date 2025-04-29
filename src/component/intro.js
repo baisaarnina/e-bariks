@@ -50,7 +50,7 @@ export default function Intro() {
                         }}
                     />
                     <Box sx={{ textAlign: 'end' }}>
-                        <a href="https://www.flickr.com/photos/eustaquio/5335633560/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.8em', color: 'gray' }}>
+                        <a href="https://www.flickr.com/photos/eustaquio/5335633560/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.8em', color: 'white' }}>
                             Source: Flickr
                         </a>
                     </Box>
