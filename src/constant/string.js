@@ -1,7 +1,7 @@
 export const tabItems = [
   "INTRODUKSYON",
   "KASAYSAYAN",
-  "IMPLIKASYON AT PANINIWALA",
+  "GAWI AT PANINIWALA",
   "PROSESO",
   "KONKLUSION",
   "KONTAK",

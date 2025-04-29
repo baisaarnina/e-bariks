@@ -46,6 +46,8 @@ const kasangkapan = [
   {
     path: pictures[4],
     title: "WATER PUMP",
+    srcLink: 'https://images.app.goo.gl/Hxg6Dku5qTiyXFxr7',
+    src: 'Facebook',
     subtitle:
       "Isang makina na ginagamit upang pataasin ang pressure ng tubig at mailipat ito sa ibabaw ng lutuan at mapadali ang paglamig ng singaw ng nilulutong tuba.",
   },
@@ -216,9 +218,15 @@ export default function Proseso() {
                     height: "200px",
                     objectFit: "cover",
                     borderRadius: 2,
-                    mb: 2,
                   }}
                 />
+                {
+                  item.src && <Box sx={{ textAlign: 'end', mb: 2, }}>
+                  <a href={item.srcLink} target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.8em', color: 'gray' }}>
+                    Source: {item.src}
+                  </a>
+                </Box>
+                }
                 <Typography
                   sx={{ pb: S.mp12 }}
                   fontSize={{ xs: S.fs24, md: S.fs28, lg: S.fs36 }}

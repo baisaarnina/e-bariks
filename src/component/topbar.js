@@ -36,7 +36,7 @@ export default function TopBar() {
     const menu = [
         { id: 0, name: 'INTRODUKSYON', path: '/' },
         { id: 2, name: 'KASAYSAYAN', path: '/kasaysayan' },
-        { id: 1, name: 'IMPLIKASYON AT PANINIWALA', path: '/implikasyon at paniniwala' },
+        { id: 1, name: 'GAWI AT PANINIWALA', path: '/gawi at paniniwala' },
         { id: 3, name: 'PROSESO', path: '/proseso' },
         { id: 4, name: 'KONKLUSYON', path: '/konklusyon' },
         { id: 4, name: 'KONTAK', path: '/kontak' },

@@ -33,6 +33,8 @@ const brgy = [
     image: cagbalogo,
     image2: cagbalogo2,
     action: "",
+    srcLink: 'https://www.facebook.com/share/p/16XRHodTVc/',
+    src: 'Facebook'
   },
   {
     id: 1,
@@ -49,6 +51,8 @@ const brgy = [
     image: matango,
     image2: matango2,
     action: "",
+    srcLink: 'https://www.facebook.com/share/p/152iqmUqgBp/',
+    src: 'Facebook'
   },
 ];
 
@@ -91,7 +95,7 @@ export default function Barangay() {
             },
           }}
         >
-          MGA BARANGAY SA VINZONS NA MAYROONG KABUHAYAN NG PAGBABARIKS
+          MGA BARANGGAY SA VINZONS NA MAYROONG KABUHAYAN NG PAGBABARIKS
         </Typography>
         <Typography sx={{ fontSize: 16, marginBottom: 2, color: "#000000" }}>
           {homeData.brgy1.text}
@@ -137,7 +141,7 @@ export default function Barangay() {
               </CardContent>
             </CardActionArea>
             <CardActions sx={{ justifyContent: "center" }}>
-              <Button variant="contained" sx={{ backgroundColor: buttonColors[index % buttonColors.length],color:'white'}}onClick={() => handleOpen(item)}>
+              <Button variant="contained" sx={{ backgroundColor: buttonColors[index % buttonColors.length], color: 'white' }} onClick={() => handleOpen(item)}>
                 {item.action || "Matuto pa"}
               </Button>
             </CardActions>
@@ -199,9 +203,15 @@ export default function Barangay() {
                   width: "100%",
                   objectFit: "cover",
                   borderRadius: S.br8,
-                  mb: 2,
                 }}
               />
+              {
+                selectedItem.src && <Box sx={{ textAlign: 'end', mb: 2, }}>
+                  <a href={selectedItem.srcLink} target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.8em', color: 'gray' }}>
+                    Source: {selectedItem.src}
+                  </a>
+                </Box>
+              }
               <Typography
                 variant="h6"
                 sx={{

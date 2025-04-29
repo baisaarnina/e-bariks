@@ -49,6 +49,11 @@ export default function Intro() {
                             borderRadius: 2,
                         }}
                     />
+                    <Box sx={{ textAlign: 'end' }}>
+                        <a href="https://www.flickr.com/photos/eustaquio/5335633560/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.8em', color: 'gray' }}>
+                            Source: Flickr
+                        </a>
+                    </Box>
                 </Box>
 
             </Box>
@@ -69,7 +74,7 @@ const style = {
         display: 'flex',
         flexDirection: 'row',
         gap: 4,
-        p:5
+        p: 5
     }
 
 }

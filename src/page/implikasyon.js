@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, List, ListItem, Typography } from "@mui/material";
 import React from "react";
 
 import C from "../constant/colors";
@@ -26,7 +26,7 @@ function Implikasyon() {
                         color: '#5E3023',
                         fontWeight: 600,
                     }}>
-                        IMPLIKASYON SA PAMUMUHAY
+                        MGA GAWI PATUNGKOL
                     </Typography>
                     <Typography sx={{
                         fontSize: S.fs32,
@@ -34,7 +34,7 @@ function Implikasyon() {
                         color: '#5E3023',
                         fontWeight: 600,
                     }}>
-                        AT HAMONG KINAHAHARAP
+                        SA PAGBABARIKS
                     </Typography>
                 </Box>
                 <Box sx={{
@@ -66,17 +66,15 @@ function Implikasyon() {
                             objectPosition: 'center 12%'
                         }}
                     />
-                    <Typography sx={{
-                        color: '#FDE5D4',
-                        textAlign: 'justify',
-                        fontSize: 16,
-                        whiteSpace: 'pre-wrap',
-                        padding: '1.5rem',
-                        lineHeight: '1.8',
-                        letterSpacing: '0.5px',
-                    }}>
-                        {implikasyonText.impliTwo}
-                    </Typography>
+                    <List sx={{ color: '#FDE5D4', padding: '1.5rem' }}>
+                        {implikasyonText.bariksPractices.map((practice, index) => (
+                            <ListItem key={index}>
+                                <Typography sx={{ fontSize: 16, lineHeight: '1.8', letterSpacing: '0.5px' }}>
+                                    {`${index + 1}. ${practice}`}
+                                </Typography>
+                            </ListItem>
+                        ))}
+                    </List>
                 </Box>
             </Box>
 

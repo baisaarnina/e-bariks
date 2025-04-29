@@ -67,7 +67,7 @@ export default function Team() {
             <Card
               sx={{
                 width:'100%',
-                maxWidth: 400,
+                maxWidth: 360,
                 mx: "auto",
                 borderRadius: "12px",
                 boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
@@ -78,7 +78,7 @@ export default function Team() {
                 component="img"
                 image={member.profile}
                 alt={member.name}
-                sx={{ height: 280, objectFit: "cover" }}
+                sx={{ height: 340, objectFit: "cover" }}
               />
 
               <CardContent

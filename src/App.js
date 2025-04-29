@@ -14,7 +14,7 @@ function App() {
       <TopBar />
       <Routes>
         <Route path='/' element={<Introduksyon />} />
-        <Route path='/implikasyon at paniniwala' element={<Implikasyon />} />
+        <Route path='/gawi at paniniwala' element={<Implikasyon />} />
         <Route path='/proseso' element={<Proseso />} />
         <Route path='/konklusyon' element={<Konklusyon />} />
         <Route path="/kasaysayan" element={<Kasaysayan />} />

@@ -9,7 +9,7 @@ import { appbarHeight, pagePadding } from "../constant/constant";
 export default function Pauna() {
   return (
     <Box sx={style.maincontainer}>
-      <Box sx={{...style.container, mb:10}}>
+      <Box sx={{ ...style.container, mb: 10 }}>
         <Box xs={12} md={6} textAlign='justify' width='50%'>
           <Typography
             sx={{
@@ -51,6 +51,11 @@ export default function Pauna() {
               borderRadius: 2,
             }}
           />
+          <Box sx={{ textAlign: 'end' }}>
+            <a href="https://lifestyle.inquirer.net/3049/the-sour-truth-behind-sukang-sasa/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.8em', color: 'gray' }}>
+              Source: Lifestyle.INQ
+            </a>
+          </Box>
         </Box>
       </Box>
       <Box sx={style.container}>
@@ -65,6 +70,11 @@ export default function Pauna() {
               borderRadius: 2,
             }}
           />
+          <Box sx={{ textAlign: 'end' }}>
+            <a href="https://edition.cnn.com/2019/12/24/asia/lambanog-poisoning-philippines-intl-hnk-scli/index.html" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.8em', color: 'gray' }}>
+              Source: CNN
+            </a>
+          </Box>
         </Box>
         <Box xs={12} md={6} textAlign='justify' width='50%'>
           <Typography sx={{ fontSize: 16, marginBottom: 2 }}>
